@@ -14,4 +14,5 @@ website will have:
     drop down for number of cards (1 day, 3 days, 1 hour, 24 hours, 48 hours)
     card area for card display with overflow-x: auto (scroll horizontally)
     image area for atmosphere condition display (cloudy, windy, clear, overcast, etc)
+    EXTRA: possible integration with google maps?
     
