@@ -9,6 +9,7 @@ _________________FEATURES AND STEPS_____________________
 website will have:
 
     card area for card display with overflow-x: auto (scroll horizontally)
+brynBranch
     
 Main Deliverables
         
@@ -34,4 +35,8 @@ Extra Deliverables:
             >e.preventDefault (on the form itself)
 
         > EXTRA: possible input box for street/city address with geocoding, but need keyed api
+
+    image area for atmosphere condition display (cloudy, windy, clear, overcast, etc)
+    EXTRA: possible integration with google maps?
+main
     
