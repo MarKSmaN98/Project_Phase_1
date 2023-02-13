@@ -5,7 +5,7 @@ locSelect.addEventListener('change', e => {
 })
 
 //start code
-getPoints('30.2075,-97.7725')
+getPoints(locSelect.value);
 
 
 
@@ -13,7 +13,7 @@ getPoints('30.2075,-97.7725')
 function getUserLocation() {
     const successCallback = (position) => {
         let concatinatePos = (position.coords.latitude).toFixed(4).toString() + ',' + (position.coords.longitude).toFixed(4).toString();
-        console.log(concatinatePos)
+        //console.log(concatinatePos)
         return concatinatePos;
       };
       
@@ -56,7 +56,7 @@ function correctInput(input) {
 }
 
 function popDaily(dailyArr) {
-    console.log(dailyArr);
+    //console.log(dailyArr);
     let weatherArray = [];
     dailyArr.forEach(time => {
         let x = {
