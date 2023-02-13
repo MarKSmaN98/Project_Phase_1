@@ -1,11 +1,4 @@
-//let locationSel = document.getElementById('locationSelector').value;
-//let timeSel = document.getElementById('timeSel').value;
-
 //set eventListeners:
-let timeSelect = document.getElementById('timeSelector')
-timeSelect.addEventListener('change', e => {
-    getPoints(locSelect.value);
-})
 let locSelect = document.getElementById('locationSelector');
 locSelect.addEventListener('change', e => {
     getPoints(e.target.value);
@@ -39,25 +32,20 @@ function getPoints(location) {
     fetch(url)
         .then(res => res.json())
         .then(dataObj => {
-            console.log(timeSelect.value);
-            switch (timeSelect.value) {
-                case 'daily': getWeather(dataObj.properties.forecast);
-                break;
-                case 'hourly': getWeather(dataObj.properties.forecastHourly);
-                break;
-                default: console.log('error');
-                break;
-        }
-            //getWeather(dataObj.properties.forecast)
-            //console.log(dataObj);
-        });
+            fetch(dataObj.properties.forecast)
+                .then(res => res.json())
+                .then(data => { 
+                    //console.log(data);
+                    popDaily(data.properties.periods);
+                });
+                    //getWeather(dataObj.properties.forecast)
+                    //console.log(dataObj);
+            });
 
 }
 
 function getWeather(url) {
-    fetch(url)
-        .then(res => res.json())
-        .then(data => { return data.properties.periods});
+
 }
 
 function correctInput(input) {
@@ -69,11 +57,21 @@ function correctInput(input) {
 
 function popDaily(dailyArr) {
     console.log(dailyArr);
+    let weatherArray = [];
+    dailyArr.forEach(time => {
+        let x = {
+            name: time.name,
+            icon: time.icon,
+            temp: time.temperature,
+            unit: time.temperatureUnit,
+            windSpeed: time.windSpeed,
+            dir: time.windDirection
+        }
+        weatherArray.push(x);
+    })
+    console.log(weatherArray);
 }
 
-function popHourly(hourlyArr) {
-    console.log(hourlyArr);
-}
 
 
 
