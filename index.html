@@ -2,21 +2,55 @@
 <html>
     <head>
         <script defer src="./index.js"></script>
+        <link rel="stylesheet" href="./style.css">
         <title>Weather App</title>
     </head>
     <body>
         <div id="head">
-        </div>
-        <div id="formDiv"></div>
-        <div id="cardDiv">
-            <div id="testCard">
-                <h3 id = title></h3>
-                <img id="testPic">
-                <p id="temp">30</p>
-                <span>F</span>
-                <p id="wind">6 mph</p>
-                <span id="dir">W</span>
-
+            <div id="formDiv"></div>
+            <div id="inputDiv">
+                <label for="preLoc">Select location:</label>
+                <select name="preLoc" id="locationSelector">
+                    <option value="1">Seattle</option>
+                    <option value="2">Denver</option>
+                    <option value="3">New York</option>
+                </select>
+                <label for="timeSel">Timeframe:</label>
+                <select name="timeSel" id="timeSelector">
+                    <option value="hourly">Hourly</option>
+                    <option value="daily">Daily</option>
+                </select>
+                <form action ="" method="get" id="geoInput">
+                    <label for="input">Input Lat,Long (+-xx.xxxx,+-xx.xxxx)</label>
+                    <input type="text" name="input" id="latLong">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="cardDiv">
+                <div class="testCard">
+                    <h3 id = title>1100</h3>
+                    <img id="testPic" src="https://api.weather.gov/icons/land/day/rain_showers" >
+                    <p>6% chance of rain</p>
+                    <p id="temp">30 F</p>
+                    <p id="wind">6 mph W</p>
+    
+                </div>
+                <div class="testCard">
+                    <h3 id = title>1200</h3>
+                    <img id="testPic" src="https://api.weather.gov/icons/land/day/rain_showers" >
+                    <p>6% chance of rain</p>
+                    <p id="temp">30 F</p>
+                    <p id="wind">6 mph W</p>
+    
+                </div>
+                <div class="testCard">
+                    <h3 id = title>1300</h3>
+                    <img id="testPic" src="https://api.weather.gov/icons/land/day/rain_showers" >
+                    <p>6% chance of rain</p>
+                    <p id="temp">30 F</p>
+                    <p id="wind">6 mph W</p>
+    
+                </div>
             </div>
         </div>
         <div id="footDiv"></div>

@@ -1,0 +1,41 @@
+#head {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    border: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+#inputDiv {
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+    width: 25%;
+    align-items: start;
+
+}
+
+#cardDiv {
+    border: 5px;
+    border-style: solid;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: grey;
+    
+}
+
+.testCard {
+    border: 2px;
+    border-style: solid;
+    border-color: red;;
+    width: min-content;
+    margin-left: 5px;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+label {
+    margin-left: 50%;
+}
