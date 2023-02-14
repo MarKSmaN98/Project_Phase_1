@@ -84,10 +84,10 @@ function popDaily(dailyArr) {
 }
 
 const renderCards = (weatherArray) => {
-    const cardContainer = document.getElementById('cardDiv')
+    const cardContainer = document.getElementById('cardContainer')
     weatherArray.forEach(time => {    
         const newCard = document.createElement('div');
-        newCard.className = 'testCard';
+        newCard.className = 'card';
         if (time.probabilityOfPrecipitation.value == null) {
             time.probabilityOfPrecipitation.value = 0
         }
