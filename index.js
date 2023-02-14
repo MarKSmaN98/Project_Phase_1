@@ -83,11 +83,21 @@ const renderCards = (weatherArray) => {
         const newCard = document.createElement('div');
         newCard.className = "card"
         newCard.innerHTML = ` 
+        <div class="card">
         <h3 id = title>${time.name}</h3>
-        <img id="testPic" class="weatherPic" src="${time.icon}" >
-        <p id="shortForecast">${time.shortForecast}</p>
-        <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
-        <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        </div>
+        <div class="card">
+            <img id="testPic" class="weatherPic" src="${time.icon}" >
+        </div>
+        <div class="card">
+            <p id="shortForecast">${time.shortForecast}</p>
+        </div>
+        <div class="card">
+            <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
+        </div>
+        <div class="card">
+            <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        </div>
         `
         
         cardContainer.append(newCard);
@@ -105,11 +115,21 @@ const renderCards = (weatherArray) => {
         newMainCard.id = `mainCard${iter}`;
         iter += 1;
         newMainCard.innerHTML = `
-        <h3 id = title>${time.name}</h3>
-        <img id="testPic" class="weatherPic" src="${time.icon}" >
-        <p id="shortForecast">${time.shortForecast}</p>
-        <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
-        <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        <div class="mainCard">
+            <h3 id = title>${time.name}</h3>
+        </div>
+        <div class="mainCard">
+            <img id="testPic" class="weatherPic" src="${time.icon}" >
+        </div>
+        <div class="mainCard">
+            <p id="shortForecast">${time.shortForecast}</p>
+        </div>
+        <div class="mainCard">
+            <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
+        </div>
+        <div class="mainCard">
+            <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        </div>
         `
         
         mainCardContainer.append(newMainCard);
