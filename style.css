@@ -57,6 +57,7 @@ body {
 .card {
     width: min-content;
     margin-left: 5px;
+    position:relative;
 
     justify-content: center;
     text-align: center;
@@ -72,6 +73,8 @@ body {
 .card:hover{
     background-color: #BCF4DE;
     color: #473D52;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #weatherDetails {
@@ -109,6 +112,8 @@ button#locBtn {
 button#locBtn:hover{
     background-color: #BCF4DE;
     color: black;
+    cursor: pointer;
+    transform: scale(.9);
 }
 
 label {
@@ -140,6 +145,13 @@ label {
     top: 20%;
 }
 
+.mainCard:hover {
+    background-color: #BCF4DE;
+    color: #473D52;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 
 #mainCard2 {
     right:40%;
@@ -153,4 +165,15 @@ label {
     height: 300px;
 }
 
+/*.imgCardElements{
+    position: absolute;
+    
+}
 
+.titleCardElements{
+    position: absolute;
+}
+
+.cardElements{
+    position: absolute;
+}
