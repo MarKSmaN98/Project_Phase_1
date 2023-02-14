@@ -1,6 +1,6 @@
 * {
     resize:both;
-    font-family: Garamond, serif;
+    font-family: Verdana, sans-serif;
    }
 
 #head {
@@ -45,7 +45,7 @@ body {
     
 
     position:absolute;
-    width: 80%;
+    width: 85%;
     height: 30%;
     bottom: 6%;
     right: 10%;
@@ -67,7 +67,8 @@ body {
     background-color: #473D52;
     
     height: 90%;
-    width: 5%;
+    width: 5.5%;
+    margin: 4px;
 
     z-index:10;
     padding:10px;
@@ -179,6 +180,7 @@ label {
 .titleCardElements{
     position: absolute;
     top:8%;
+    text-align: center;
     
 }
 
@@ -190,7 +192,7 @@ label {
 
 .tempCardElements{
     position: absolute;
-    top:80%;
+    top:85%;
    
 }
 
