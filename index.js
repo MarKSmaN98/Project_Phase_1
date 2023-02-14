@@ -62,27 +62,6 @@ function correctInput(input) {
     return (x + ',' + y).replace(/\s+/g, '');
 }
 
-function popDaily(dailyArr) {
-    //console.log(dailyArr);
-    let weatherArray = [];
-    dailyArr.forEach(time => {
-        let x = {
-            name: time.name,
-            icon: time.icon,
-            temp: time.temperature,
-            unit: time.temperatureUnit,
-            windSpeed: time.windSpeed,
-            dir: time.windDirection,
-            short: time.shortForecast,
-            long: time.detailedForecast,
-            rain: time.probabilityOfPrecipitation
-
-        }
-        weatherArray.push(x);
-    })
-    console.log(weatherArray);
-}
-
 const renderCards = (weatherArray) => {
     const cardContainer = document.getElementById('cardContainer')
     weatherArray.forEach(time => {    
