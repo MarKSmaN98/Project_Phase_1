@@ -68,7 +68,9 @@ function popDaily(dailyArr) {
             windSpeed: time.windSpeed,
             dir: time.windDirection,
             short: time.shortForecast,
-            long: time.detailedForecast
+            long: time.detailedForecast,
+            rain: time.probabilityOfPrecipitation
+
         }
         weatherArray.push(x);
     })
