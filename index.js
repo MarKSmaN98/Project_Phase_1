@@ -76,6 +76,8 @@ const renderCards = (weatherArray) => {
         element.remove();
     });
 
+    renderDetails(weatherArray[0]);
+
     weatherArray.forEach(time => {    
         // console.log(time)
         const newCard = document.createElement('div');
