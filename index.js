@@ -7,6 +7,13 @@ let locBtn = document.getElementById('locBtn');
 locBtn.addEventListener('click', e => {
     getUserLocation();
 })
+let formSub = document.getElementById('geoInput');
+formSub.addEventListener('submit', e => {
+    e.preventDefault();
+    let userInput = correctInput(e.target.input.value);
+    e.target.reset();
+    getPoints(userInput);
+})
 
 let OverallWeatherData;
 
