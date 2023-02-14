@@ -89,10 +89,10 @@ const renderCards = (weatherArray) => {
         <div class="imgCardElements">
             <img id="testPic" class="weatherPic" src="${time.icon}" >
         </div>
-        <div class="cardElements">
+        <div class="forecastCardElements">
             <p id="shortForecast">${time.shortForecast}</p>
         </div>
-        <div class="cardElements">
+        <div class="tempCardElements">
             <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
         </div>
         `
