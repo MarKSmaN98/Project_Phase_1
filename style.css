@@ -1,3 +1,8 @@
+* {
+    resize:both;
+    font-family: Garamond, serif;
+   }
+
 #head {
     display: flex;
     align-items: center;
@@ -14,19 +19,19 @@ body {
 
 #inputDiv {
     border: 2px;
-    width: 15%;
+    width: 100%;
     align-items: start;
 
     position:absolute;
-    left:10%;
-    top:10%;
+    left:0%;
+    top:0%;
     background-color: rgba(34,34,34,0.6);
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
     border-radius: 4px; 
 
-    color: #FFF1D0;
+    color: #F0F7EE;
 }
 
 #cardContainer {
@@ -36,11 +41,12 @@ body {
     flex-flow: row wrap;
     background-color: grey;
     height: min-content;
-    width: 69%;
+    justify-content: center;
+    
 
     position:absolute;
-    left:28%;
-    top:10%;
+    bottom:10%;
+    right: 10%;
     background-color: rgba(34,34,34,0.6);
     z-index:10;
     padding:10px;
@@ -54,25 +60,28 @@ body {
 
     justify-content: center;
     text-align: center;
-    color: #FFF1D0;
+    color: #F0F7EE;
     background-color: #473D52;
     
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
-    border-radius: 4px; 
+    border-radius: 4px;
+}
+
+.card:hover{
+    background-color: #BCF4DE;
+    color: #473D52;
 }
 
 #weatherDetails {
       
-    color: #FFF1D0;
+    color: #F0F7EE;
     background-color: #473D52;
     position: fixed;
-    top: 40%;
-    bottom: 20%;
-    left: 2%;
-    width: 10%;
-
+    top: 20%;
+    left: 10%;
+    width: 15%;
 
     z-index:10;
     padding:10px;
@@ -80,10 +89,68 @@ body {
     border-radius: 4px;  
 }
 
+button#locBtn {
+    position: fixed;
+    top: 1.5%;
+    left: 2%;
+    transition-duration: .2s;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#cardContainerHeader{
+    color: #F0F7EE;
+    font-size: 24px;
+    position: absolute;
+
+    z-index:12;
+}
+
+button#locBtn:hover{
+    background-color: #BCF4DE;
+    color: black;
+}
+
 label {
     margin-left: 50%;
 }
 
-.weatherPic {
-    display: inline-block;
+#mainCardContainer {
+    color: #F0F7EE;
+    background-color: rgba(34,34,34,0.6);
+
+    
+    position: relative;
+    top: 20%;
+    right:35%;
+    left: 35%;
+    display: inline-flex;
 }
+
+.mainCard{
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+    background-color: #473D52;
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px;
+    scale: 1.9;
+    top: 20%;
+}
+
+
+#mainCard2 {
+    right:40%;
+    width: 100px;
+    height: 300px;
+}
+
+#mainCard1 {
+    left: 40%;
+    width: 100px;
+    height: 300px;
+}
+
+
