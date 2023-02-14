@@ -97,10 +97,13 @@ const renderCards = (weatherArray) => {
         });        
     });
 
+    let iter = 1;
     weatherArray.slice(0,2).forEach(time => { //get the first two elements from the array and display them in main cards
         // console.log(time)
         const newMainCard = document.createElement('div');
         newMainCard.className = 'mainCard';
+        newMainCard.id = `mainCard${iter}`;
+        iter += 1;
         newMainCard.innerHTML = `
         <h3 id = title>${time.name}</h3>
         <img id="testPic" class="weatherPic" src="${time.icon}" >
