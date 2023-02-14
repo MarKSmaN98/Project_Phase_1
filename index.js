@@ -8,6 +8,8 @@ locBtn.addEventListener('click', e => {
     getUserLocation();
 })
 
+let OverallWeatherData;
+
 //start code
 getPoints(locSelect.value);
 
@@ -38,6 +40,7 @@ function getPoints(location) {
                 .then(res => res.json())
                 .then(data => { 
                     //console.log(data);
+                    OverallWeatherData = data;
                     popDaily(data.properties.periods);
                 });
                     //getWeather(dataObj.properties.forecast)
