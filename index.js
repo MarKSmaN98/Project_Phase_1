@@ -80,6 +80,20 @@ const renderCards = (weatherArray) => {
         `
         cardContainer.append(newCard);
 
-        
-        
-    })};
+        newCard.addEventListener('click', e => {
+           renderDetails(time)
+        });        
+    });
+    
+}
+
+    const renderDetails = (weatherDataObject) => {
+        const weatherDetailsContainer = document.getElementById('weatherDetails');
+        weatherDetailsContainer.innerHTML = `
+        <h4>Weather Details</h4>
+        <p id="detailedforecast" class="detailSection">${weatherDataObject.detailedForecast}</p>
+        <p id="probabilityOfPrecipitation" class="detailSection">${weatherDataObject.probabilityOfPrecipitation.value}% of rain</p>
+        <p id="relativeHumidity" class="detailSection">Relative Humidity: ${weatherDataObject.relativeHumidity.value}%</p>
+        <p id="dewpoint" class="detailSection">Dewpoint: ${weatherDataObject.dewpoint.value}</p>
+        `
+    }
