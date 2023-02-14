@@ -83,20 +83,17 @@ const renderCards = (weatherArray) => {
         const newCard = document.createElement('div');
         newCard.className = "card"
         newCard.innerHTML = ` 
-        <div class="card">
+        <div class="cardElements">
         <h3 id = title>${time.name}</h3>
         </div>
-        <div class="card">
+        <div class="cardElements">
             <img id="testPic" class="weatherPic" src="${time.icon}" >
         </div>
-        <div class="card">
+        <div class="cardElements">
             <p id="shortForecast">${time.shortForecast}</p>
         </div>
-        <div class="card">
+        <div class="cardElements">
             <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
-        </div>
-        <div class="card">
-            <p id="wind">${time.windSpeed} ${time.windDirection}</p>
         </div>
         `
         
@@ -115,20 +112,17 @@ const renderCards = (weatherArray) => {
         newMainCard.id = `mainCard${iter}`;
         iter += 1;
         newMainCard.innerHTML = `
-        <div class="mainCard">
+        <div class="mainCardElements">
             <h3 id = title>${time.name}</h3>
         </div>
-        <div class="mainCard">
+        <div class="mainCardElements">
             <img id="testPic" class="weatherPic" src="${time.icon}" >
         </div>
-        <div class="mainCard">
+        <div class="mainCardElements">
             <p id="shortForecast">${time.shortForecast}</p>
         </div>
-        <div class="mainCard">
+        <div class="mainCardElements">
             <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
-        </div>
-        <div class="mainCard">
-            <p id="wind">${time.windSpeed} ${time.windDirection}</p>
         </div>
         `
         
@@ -154,5 +148,6 @@ const renderDetails = (weatherDataObject) => {
         <p id="probabilityOfPrecipitation" class="detailSection">${weatherDataObject.probabilityOfPrecipitation.value}% of rain</p>
         <p id="relativeHumidity" class="detailSection">Relative Humidity: ${weatherDataObject.relativeHumidity.value}%</p>
         <p id="dewpoint" class="detailSection">Dewpoint: ${weatherDataObject.dewpoint.value}</p>
+        <p id="wind">${weatherDataObject.windSpeed} ${weatherDataObject.windDirection}</p>
         `
     }
