@@ -64,6 +64,10 @@ function correctInput(input) {
 
 const renderCards = (weatherArray) => {
     const cardContainer = document.getElementById('cardContainer')
+    let target = cardContainer.querySelectorAll('div');
+    target.forEach(element => {
+        element.remove();
+    })
     weatherArray.forEach(time => {    
         const newCard = document.createElement('div');
         newCard.className = 'card';
