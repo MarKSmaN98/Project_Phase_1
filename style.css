@@ -2,39 +2,61 @@
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
-    border: 2px;
-    border-style: solid;
-    border-color: green;
+}
+
+body {
+    background-color: #001524;
 }
 
 #inputDiv {
     border: 2px;
-    border-style: solid;
-    border-color: red;
-    width: 25%;
+    width: 15%;
+    height: 30%;
     align-items: start;
 
+    position:absolute;
+    left:10%;
+    top:10%;
+    background-color: rgba(34,34,34,0.6);
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px; 
+
+    color: #CFE0C3
 }
 
 #cardContainer {
-    border: 5px;
+    border: 2px;
     border-style: solid;
     display: flex;
     flex-flow: row wrap;
     background-color: grey;
-    
-    
+    height: min-content;
+
+    position:absolute;
+    left:30%;
+    top:10%;
+    background-color: rgba(34,34,34,0.6);
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px; 
 }
 
 .card {
-    border: 2px;
-    border-style: solid;
-    border-color: red;;
     width: min-content;
     margin-left: 5px;
+
     justify-content: center;
     text-align: center;
-    background-color: white;
+    color: #CFE0C3;
+    background-color: #40798C;
+    
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px; 
 }
 
 label {
