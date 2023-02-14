@@ -64,17 +64,24 @@ function correctInput(input) {
 
 const renderCards = (weatherArray) => {
     const cardContainer = document.getElementById('cardContainer')
+    const mainCardContainer = document.getElementById('mainCardContainer')
+    
     let target = cardContainer.querySelectorAll('div');
     target.forEach(element => {
+        element.remove(); 
+    });
+
+    let targetTwo = mainCardContainer.querySelectorAll('div');
+    targetTwo.forEach(element => {
         element.remove();
-    })
+    });
+
+
+
     weatherArray.forEach(time => {    
+        // console.log(time)
         const newCard = document.createElement('div');
-        newCard.className = 'card';
-        if (time.probabilityOfPrecipitation.value == null) {
-            time.probabilityOfPrecipitation.value = 0
-        }
-        console.log(time)
+        newCard.className = "card"
         newCard.innerHTML = ` 
         <h3 id = title>${time.name}</h3>
         <img id="testPic" class="weatherPic" src="${time.icon}" >
@@ -82,17 +89,42 @@ const renderCards = (weatherArray) => {
         <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
         <p id="wind">${time.windSpeed} ${time.windDirection}</p>
         `
+        
         cardContainer.append(newCard);
 
         newCard.addEventListener('click', e => {
            renderDetails(time)
         });        
     });
+
+    weatherArray.slice(0,2).forEach(time => {
+        // console.log(time)
+        const newMainCard = document.createElement('div');
+        newMainCard.className = 'mainCard';
+        newMainCard.innerHTML = `
+        <h3 id = title>${time.name}</h3>
+        <img id="testPic" class="weatherPic" src="${time.icon}" >
+        <p id="shortForecast">${time.shortForecast}</p>
+        <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
+        <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        `
+        
+        mainCardContainer.append(newMainCard);
+
+        newMainCard.addEventListener('click', e => {
+           renderDetails(time)
+        });  
+    })
     
 }
 
-    const renderDetails = (weatherDataObject) => {
+
+
+const renderDetails = (weatherDataObject) => {
         const weatherDetailsContainer = document.getElementById('weatherDetails');
+        if (time.probabilityOfPrecipitation.value == null) {
+            time.probabilityOfPrecipitation.value = 0
+        }
         weatherDetailsContainer.innerHTML = `
         <h4>Weather Details</h4>
         <p id="detailedforecast" class="detailSection">${weatherDataObject.detailedForecast}</p>
