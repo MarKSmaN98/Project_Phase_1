@@ -3,6 +3,10 @@ let locSelect = document.getElementById('locationSelector');
 locSelect.addEventListener('change', e => {
     getPoints(e.target.value);
 })
+let locBtn = document.getElementById('locBtn');
+locBtn.addEventListener('click', e => {
+    getUserLocation();
+})
 
 //start code
 getPoints(locSelect.value);
@@ -14,14 +18,12 @@ function getUserLocation() {
     const successCallback = (position) => {
         let concatinatePos = (position.coords.latitude).toFixed(4).toString() + ',' + (position.coords.longitude).toFixed(4).toString();
         //console.log(concatinatePos)
-        return concatinatePos;
+        getPoints(concatinatePos);
       };
       
     const errorCallback = (error) => {
         console.log(error);
       };
-      
-    
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }
 
@@ -41,10 +43,6 @@ function getPoints(location) {
                     //getWeather(dataObj.properties.forecast)
                     //console.log(dataObj);
             });
-
-}
-
-function getWeather(url) {
 
 }
 
