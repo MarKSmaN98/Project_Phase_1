@@ -40,8 +40,7 @@ function getPoints(location) {
                 .then(res => res.json())
                 .then(data => { 
                     //console.log(data);
-                    OverallWeatherData = data;
-                    popDaily(data.properties.periods);
+                    renderCards(data.properties.periods);
                 });
                     //getWeather(dataObj.properties.forecast)
                     //console.log(dataObj);
@@ -77,7 +76,26 @@ function popDaily(dailyArr) {
     console.log(weatherArray);
 }
 
+const renderCards = (weatherArray) => {
+    const cardContainer = document.getElementById('cardDiv')
+    weatherArray.forEach(time => {    
+        const newCard = document.createElement('div');
+        newCard.className = 'testCard';
+        if (time.probabilityOfPrecipitation.value == null) {
+            time.probabilityOfPrecipitation.value = 0
+        }
+        newCard.innerHTML = ` 
+        <h3 id = title>${time.name}</h3>
+        <img id="testPic" src="${time.icon}" >
+        <p>${time.probabilityOfPrecipitation.value}% of rain</p>
+        <p id="temp">${time.temperature} ${time.temperatureUnit}</p>
+        <p id="wind">${time.windSpeed} ${time.windDirection}</p>
+        `
+        cardContainer.append(newCard);
 
+        
+        
+    })};
 
 
 
