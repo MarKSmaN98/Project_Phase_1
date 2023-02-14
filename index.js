@@ -76,8 +76,6 @@ const renderCards = (weatherArray) => {
         element.remove();
     });
 
-
-
     weatherArray.forEach(time => {    
         // console.log(time)
         const newCard = document.createElement('div');
@@ -97,7 +95,7 @@ const renderCards = (weatherArray) => {
         });        
     });
 
-    weatherArray.slice(0,2).forEach(time => {
+    weatherArray.slice(0,2).forEach(time => { //get the first two elements from the array and display them in main cards
         // console.log(time)
         const newMainCard = document.createElement('div');
         newMainCard.className = 'mainCard';
@@ -122,8 +120,8 @@ const renderCards = (weatherArray) => {
 
 const renderDetails = (weatherDataObject) => {
         const weatherDetailsContainer = document.getElementById('weatherDetails');
-        if (time.probabilityOfPrecipitation.value == null) {
-            time.probabilityOfPrecipitation.value = 0
+        if (weatherDataObject.probabilityOfPrecipitation.value == null) {
+            weatherDataObject.probabilityOfPrecipitation.value = 0
         }
         weatherDetailsContainer.innerHTML = `
         <h4>Weather Details</h4>
