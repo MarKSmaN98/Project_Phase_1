@@ -63,7 +63,9 @@ function popDaily(dailyArr) {
             temp: time.temperature,
             unit: time.temperatureUnit,
             windSpeed: time.windSpeed,
-            dir: time.windDirection
+            dir: time.windDirection,
+            short: time.shortForecast,
+            long: time.detailedForecast
         }
         weatherArray.push(x);
     })
