@@ -83,10 +83,10 @@ const renderCards = (weatherArray) => {
         const newCard = document.createElement('div');
         newCard.className = "card"
         newCard.innerHTML = ` 
-        <div class="cardElements">
+        <div class="titleCardElements">
         <h3 id = title>${time.name}</h3>
         </div>
-        <div class="cardElements">
+        <div class="imgCardElements">
             <img id="testPic" class="weatherPic" src="${time.icon}" >
         </div>
         <div class="cardElements">
@@ -112,10 +112,10 @@ const renderCards = (weatherArray) => {
         newMainCard.id = `mainCard${iter}`;
         iter += 1;
         newMainCard.innerHTML = `
-        <div class="mainCardElements">
+        <div class="titleMainCardElements">
             <h3 id = title>${time.name}</h3>
         </div>
-        <div class="mainCardElements">
+        <div class="imageMainCardElements">
             <img id="testPic" class="weatherPic" src="${time.icon}" >
         </div>
         <div class="mainCardElements">
