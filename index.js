@@ -1,3 +1,25 @@
+//Swap StyleSheets Section
+
+const styleButton = document.querySelector('#swapStyle');
+const link = document.querySelector('link');
+
+let styleBoolean = true;
+
+function changeStyleSheets (){
+    styleBoolean = !styleBoolean;
+    if (styleBoolean === true){
+        styleButton.innerText = "Light Mode"
+        link.setAttribute('href',"./StyleSheets/darkstyle.css")
+    } else {
+        styleButton.innerText = "Dark Mode"
+        link.setAttribute('href',"./StyleSheets/lightstyle.css")
+    }
+    }
+
+styleButton.addEventListener('click',(e) => {changeStyleSheets()});
+
+
+
 //set eventListeners:
 let locSelect = document.getElementById('locationSelector');
 locSelect.addEventListener('change', e => {

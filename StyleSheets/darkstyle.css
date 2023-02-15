@@ -263,12 +263,12 @@ label {
     top: 80%;
 }
 
-/* Header Button */
+/* Header Section */
 
 button#locBtn {
     position: fixed;
     top: 2%;
-    left: 46.6%;
+    left: 25%;
     transition-duration: .2s;
     border-radius: 8px;
     font-size: 16px;
@@ -284,7 +284,7 @@ button#locBtn:hover{
 input[type=submit] {
     position: fixed;
     top: 2%;
-    right : 73%;
+    right : 76%;
     transition-duration: .2s;
     border-radius: 8px;
     font-size: 16px;
@@ -331,6 +331,23 @@ label[for=preLoc]{
     white-space: nowrap;
 }
 
+#swapStyle{
+    
+    position: fixed;
+    top: 2%;
+    left: 48%;
+    transition-duration: .2s;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#swapStyle:hover{
+    background-color: #BCF4DE;
+    color: black;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
 /* Side Windows */
 
 #footDiv {
@@ -361,4 +378,10 @@ label[for=preLoc]{
     padding:10px;
     box-shadow:0px 0px 7px #000000;
     border-radius: 4px;  
+}
+
+/* Clicked Status */
+
+.clicked {
+    opacity: .5;
 }
