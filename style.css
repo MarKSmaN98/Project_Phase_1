@@ -96,6 +96,8 @@ body {
 .imgCardElements{
     position: absolute;
     top:30%;
+    left : 0%;
+    width: 100%;
 }
 
 .imgCardElements img {
@@ -220,7 +222,7 @@ label {
 button#locBtn {
     position: fixed;
     top: 2%;
-    left: 50%;
+    left: 46.6%;
     transition-duration: .2s;
     border-radius: 8px;
     font-size: 16px;
