@@ -35,6 +35,15 @@ body {
 
     color: #F0F7EE;
 }
+/* Weekly Snapshot */
+
+#cardContainerHeader{
+    color: #F0F7EE;
+    font-size: 24px;
+    position: absolute;
+
+    z-index:12;
+}
 
 #cardContainer {
     border: 2px;
@@ -85,19 +94,53 @@ body {
     transform: scale(1.1);
 }
 
-
-
-#cardContainerHeader{
-    color: #F0F7EE;
-    font-size: 24px;
+.imgCardElements{
     position: absolute;
-
-    z-index:12;
+    top:30%;
 }
+
+.imgCardElements img {
+    max-width: 100%;
+    height:auto;
+}
+
+.titleCardElements{
+    position: absolute;
+    top:1%;
+    margin: auto;
+}
+
+.forecastCardElements{
+    position: absolute;
+    top:55%;
+}
+
+.tempCardElements{
+    position: absolute;
+    top:85%;
+}
+
+.cardContainerHeader{
+    position: absolute;
+    width: 100%;
+    left: 46%;
+    justify-content: center;
+    background-color: #473D52;
+}
+
+#cardContainerSection{
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    top: 70%;
+}
+
 
 label {
     margin-left: 50%;
 }
+
+/* Main Card Container */
 
 #mainCardContainerContainer {
     border: 2px;
@@ -159,46 +202,9 @@ label {
     height: 300px;
 }
 
-.imgCardElements{
-    position: absolute;
-    top:30%;
-}
 
-.imgCardElements img {
-    max-width: 100%;
-    height:auto;
-}
 
-.titleCardElements{
-    position: absolute;
-    top:1%;
-    margin: auto;
-}
-
-.forecastCardElements{
-    position: absolute;
-    top:55%;
-}
-
-.tempCardElements{
-    position: absolute;
-    top:85%;
-}
-
-.cardContainerHeader{
-    position: absolute;
-    top:58%;
-    width: 100%;
-    justify-content: center;
-    background-color: #473D52;
-}
-
-#cardContainerSection{
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    
-}
+/* Header Button */
 
 button#locBtn {
     position: fixed;
@@ -265,6 +271,8 @@ label[for=preLoc]{
     font-size: 16px;
     white-space: nowrap;
 }
+
+/* Side Windows */
 
 #footDiv {
     width:15%;
