@@ -10,15 +10,13 @@
 }
 
 body {
-    background-image: linear-gradient(#00243D, #001524);
+    background-color: #FFE6E3;
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
 }
-
-
 
 #inputDiv {
     border: 2px;
@@ -29,7 +27,7 @@ body {
     position:absolute;
     left:0%;
     top:0%;
-    background-color: rgba(34,34,34,0.6);
+    background-color: #1F363D;
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
@@ -72,7 +70,7 @@ body {
     right: 1%;
     bottom: 6%;
     margin: auto;
-    background-color: rgba(34,34,34,0.6);
+    background-color: #1F363D;
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
@@ -86,7 +84,7 @@ body {
     text-align: center;
     align-content: center;
     color: #F0F7EE;
-    background-color: #473D52;
+    background-color: #2C8C99;
     
     height: 90%;
     width: 5.5%;
@@ -101,7 +99,7 @@ body {
 
 .card:hover{
     background-color: #BCF4DE;
-    color: #473D52;
+    color: #2C8C99;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -156,10 +154,10 @@ body {
     right: 44.5%;
     height: 6.6%;
     justify-content: center;
-    background-color: #473D52;
+    background-color: #2C8C99;
     white-space: nowrap;
 
-    background-color: rgba(34,34,34,0.6);
+    background-color: #1F363D;
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
@@ -168,7 +166,7 @@ body {
 
 #cardContainerHeader {
     font-size: 1.5vw;
-    background-color: rgba(34,34,34,0.6);
+    background-color: #1F363D;
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0px 0px 7px #000000;
@@ -202,7 +200,7 @@ label {
 
 #mainCardContainer {
     color: #F0F7EE;
-    background-color: rgba(34,34,34,0.6);
+    background-color: #1F363D;
 
     position: fixed;
     top: 20%;
@@ -223,7 +221,7 @@ label {
 .mainCard{
     position: absolute;
     text-align: center;
-    background-color: #473D52;
+    background-color: #2C8C99;
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
@@ -241,7 +239,7 @@ label {
 
 .mainCard:hover {
     background-color: #BCF4DE;
-    color: #473D52;
+    color: #2C8C99;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -270,7 +268,7 @@ label {
 button#locBtn {
     position: fixed;
     top: 2%;
-    left: 46.6%;
+    left: 25%;
     transition-duration: .2s;
     border-radius: 8px;
     font-size: 16px;
@@ -286,7 +284,7 @@ button#locBtn:hover{
 input[type=submit] {
     position: fixed;
     top: 2%;
-    right : 73%;
+    right : 76%;
     transition-duration: .2s;
     border-radius: 8px;
     font-size: 16px;
@@ -333,6 +331,23 @@ label[for=preLoc]{
     white-space: nowrap;
 }
 
+#swapStyle{
+    
+    position: fixed;
+    top: 2%;
+    left: 48%;
+    transition-duration: .2s;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#swapStyle:hover{
+    background-color: #BCF4DE;
+    color: black;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
 /* Side Windows */
 
 #footDiv {
@@ -342,7 +357,7 @@ label[for=preLoc]{
     top: 20%;
     right: 10%;
     color: #F0F7EE;
-    background-color: #473D52;
+    background-color: #2C8C99;
     z-index:10;
     padding:10px;
     box-shadow:0px 0px 7px #000000;
@@ -353,7 +368,7 @@ label[for=preLoc]{
 #weatherDetails {
       
     color: #F0F7EE;
-    background-color: #473D52;
+    background-color: #2C8C99;
     position: fixed;
     top: 20%;
     left: 10%;
@@ -363,4 +378,8 @@ label[for=preLoc]{
     padding:10px;
     box-shadow:0px 0px 7px #000000;
     border-radius: 4px;  
+}
+
+.clicked {
+    opacity: .5;
 }
