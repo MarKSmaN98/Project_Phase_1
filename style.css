@@ -39,7 +39,7 @@ body {
     border: 2px;
     border-style: solid;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     background-color: grey;
     height: min-content;
     justify-content: center;
