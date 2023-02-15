@@ -15,6 +15,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 #inputDiv {
@@ -252,4 +253,19 @@ label[for=preLoc]{
     border-radius: 8px;
     font-size: 16px;
     white-space: nowrap;
+}
+
+#footDiv {
+    width:15%;
+    height:auto;
+    position: fixed;
+    top: 18%;
+    right: 10%;
+    color: #F0F7EE;
+    background-color: #473D52;
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px; 
+
 }
