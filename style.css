@@ -145,14 +145,7 @@ body {
 }
 
 #temp {
-    font-size: 1.5vw;
-    background-color: rgba(34,34,34,0.6);
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 7px #000000;
-    left: 75%;
-    position: relative;
-    top: -8%;
+    font-size: .9vw;
 }
 
 .cardContainerHeader{
@@ -173,6 +166,13 @@ body {
 
 #cardContainerHeader {
     font-size: 1.5vw;
+    background-color: rgba(34,34,34,0.6);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px #000000;
+    left: 75%;
+    position: relative;
+    top: -8%;
 }
 
 #cardContainerSection{
