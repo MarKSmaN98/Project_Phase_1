@@ -141,11 +141,11 @@ body {
 
 .tempCardElements{
     position: absolute;
-    top:80%;
+    top:82%;
 }
 
 #temp {
-    font-size: 1vw;
+    font-size: .9vw;
 }
 
 .cardContainerHeader{
