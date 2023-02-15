@@ -100,7 +100,7 @@ body {
 
 .imgCardElements img {
     max-width: 100%;
-    height:auto;
+    max-height: 100%;
 }
 
 .titleCardElements{
@@ -110,14 +110,26 @@ body {
     width: 100%;
 }
 
+.newCardTitle {
+    font-size: .8vw;
+}
+
+#shortForecast {
+    font-size: .8vw;
+}
+
 .forecastCardElements{
     position: absolute;
-    top:55%;
+    top:60%;
 }
 
 .tempCardElements{
     position: absolute;
     top:85%;
+}
+
+#temp {
+    font-size: 1vw;
 }
 
 .cardContainerHeader{
