@@ -127,6 +127,10 @@ const renderCards = (weatherArray) => {
             Array.from(cardContainerHTML).forEach((div)=>{
                 div.classList.remove('clicked')
             })
+            const mainCardContainerHTML = document.getElementsByClassName('mainCard');
+            Array.from(mainCardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
             renderDetails(time);
             newCard.classList.add ('clicked')
         });        
@@ -157,6 +161,10 @@ const renderCards = (weatherArray) => {
         mainCardContainer.append(newMainCard);
 
         newMainCard.addEventListener('click', e => {
+            const cardContainerHTML = document.getElementsByClassName('card');
+            Array.from(cardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
             const mainCardContainerHTML = document.getElementsByClassName('mainCard');
             Array.from(mainCardContainerHTML).forEach((div)=>{
                 div.classList.remove('clicked')
