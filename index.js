@@ -148,6 +148,6 @@ const renderDetails = (weatherDataObject) => {
         <p id="probabilityOfPrecipitation" class="detailSection">${weatherDataObject.probabilityOfPrecipitation.value}% of rain</p>
         <p id="relativeHumidity" class="detailSection">Relative Humidity: ${weatherDataObject.relativeHumidity.value}%</p>
         <p id="dewpoint" class="detailSection">Dewpoint: ${weatherDataObject.dewpoint.value}</p>
-        <p id="wind">${weatherDataObject.windSpeed} ${weatherDataObject.windDirection}</p>
+        <p id="wind">Wind: ${weatherDataObject.windSpeed} ${weatherDataObject.windDirection}</p>
         `
     }
