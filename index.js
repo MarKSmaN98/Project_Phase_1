@@ -183,12 +183,13 @@ const renderDetails = (weatherDataObject) => {
         if (weatherDataObject.probabilityOfPrecipitation.value == null) {
             weatherDataObject.probabilityOfPrecipitation.value = 0
         }
+        dewpointValue = weatherDataObject.dewpoint.value.toFixed(2)
         weatherDetailsContainer.innerHTML = `
         <h4>Weather Details</h4>
         <p id="detailedforecast" class="detailSection">${weatherDataObject.detailedForecast}</p>
         <p id="probabilityOfPrecipitation" class="detailSection">${weatherDataObject.probabilityOfPrecipitation.value}% of rain</p>
         <p id="relativeHumidity" class="detailSection">Relative Humidity: ${weatherDataObject.relativeHumidity.value}%</p>
-        <p id="dewpoint" class="detailSection">Dewpoint: ${weatherDataObject.dewpoint.value}</p>
+        <p id="dewpoint" class="detailSection">Dewpoint:${dewpointValue}</p>
         <p id="wind">Wind: ${weatherDataObject.windSpeed} ${weatherDataObject.windDirection}</p>
         `
     }
