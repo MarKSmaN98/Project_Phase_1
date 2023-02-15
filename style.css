@@ -99,21 +99,36 @@ label {
     margin-left: 50%;
 }
 
+#mainCardContainerContainer {
+    border: 2px;
+    border-color: red;
+    position: fixed;
+    top:40%;
+    bottom: 40%;
+    right:40%;
+    left: 40%;
+}
+
 #mainCardContainer {
     color: #F0F7EE;
     background-color: rgba(34,34,34,0.6);
 
-    
     position: fixed;
     top: 20%;
     right:35%;
     left: 35%;
+    bottom: 59%;
+    
     display: inline-flex;
+    
+    z-index:9;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px;
 }
 
 .mainCard{
     position: absolute;
-    justify-content: center;
     text-align: center;
     background-color: #473D52;
     z-index:10;
@@ -121,7 +136,7 @@ label {
     box-shadow:0px 0px 7px #000000;
     border-radius: 4px;
     scale: 1.8;
-    top: 20%;
+    top: 0%;
 }
 
 .mainCard:hover {
@@ -133,13 +148,13 @@ label {
 
 
 #mainCard2 {
-    right:40%;
+    right:15%;
     width: 110px;
     height: 300px;
 }
 
 #mainCard1 {
-    left: 40%;
+    left: 15%;
     width: 110px;
     height: 300px;
 }
@@ -147,7 +162,6 @@ label {
 .imgCardElements{
     position: absolute;
     top:30%;
-    
 }
 
 .imgCardElements img {
@@ -164,13 +178,11 @@ label {
 .forecastCardElements{
     position: absolute;
     top:55%;
-    
 }
 
 .tempCardElements{
     position: absolute;
     top:85%;
-    
 }
 
 .cardContainerHeader{
