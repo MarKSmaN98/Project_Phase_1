@@ -193,6 +193,13 @@ label {
     background-color: #473D52;
 }
 
+#cardContainerSection{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    
+}
+
 button#locBtn {
     position: fixed;
     top: 2%;
