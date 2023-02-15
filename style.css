@@ -57,7 +57,7 @@ body {
 
     position:absolute;
     width: 85%;
-    height: 30%;
+    height: 70%;
     bottom: 6%;
     right: 10%;
     background-color: rgba(34,34,34,0.6);
@@ -132,9 +132,8 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0%;
-    top: 70%;
+    top: 60%;
 }
-
 
 label {
     margin-left: 50%;
