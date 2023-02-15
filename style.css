@@ -50,8 +50,6 @@ body {
     border-style: solid;
     display: flex;
     flex-flow: row nowrap;
-    background-color: grey;
-    height: min-content;
     justify-content: center;
     
 
@@ -69,18 +67,17 @@ body {
 }
 
 .card {
-    width: min-content;
-    margin-left: 5px;
     position:relative;
 
     justify-content: center;
     text-align: center;
+    align-content: center;
     color: #F0F7EE;
     background-color: #473D52;
     
     height: 90%;
     width: 5.5%;
-    margin: 4px;
+    margin: 5px;
 
     z-index:10;
     padding:10px;
@@ -108,7 +105,8 @@ body {
 .titleCardElements{
     position: absolute;
     top:1%;
-    margin: auto;
+    left : 0%;
+    width: 100%;
 }
 
 .forecastCardElements{
