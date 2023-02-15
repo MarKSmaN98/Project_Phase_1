@@ -85,20 +85,7 @@ body {
     transform: scale(1.1);
 }
 
-#weatherDetails {
-      
-    color: #F0F7EE;
-    background-color: #473D52;
-    position: fixed;
-    top: 20%;
-    left: 10%;
-    width: 15%;
 
-    z-index:10;
-    padding:10px;
-    box-shadow:0px 0px 7px #000000;
-    border-radius: 4px;  
-}
 
 #cardContainerHeader{
     color: #F0F7EE;
@@ -117,7 +104,7 @@ label {
     background-color: rgba(34,34,34,0.6);
 
     
-    position: relative;
+    position: fixed;
     top: 20%;
     right:35%;
     left: 35%;
@@ -125,7 +112,7 @@ label {
 }
 
 .mainCard{
-    position: fixed;
+    position: absolute;
     justify-content: center;
     text-align: center;
     background-color: #473D52;
@@ -264,7 +251,7 @@ label[for=preLoc]{
     width:15%;
     height:auto;
     position: fixed;
-    top: 18%;
+    top: 20%;
     right: 10%;
     color: #F0F7EE;
     background-color: #473D52;
@@ -273,4 +260,19 @@ label[for=preLoc]{
     box-shadow:0px 0px 7px #000000;
     border-radius: 4px; 
 
+}
+
+#weatherDetails {
+      
+    color: #F0F7EE;
+    background-color: #473D52;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 15%;
+
+    z-index:10;
+    padding:10px;
+    box-shadow:0px 0px 7px #000000;
+    border-radius: 4px;  
 }
