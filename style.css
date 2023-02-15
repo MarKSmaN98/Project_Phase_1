@@ -123,6 +123,8 @@ body {
 .forecastCardElements{
     position: absolute;
     top:60%;
+    width: 100%;
+    left: 0%;
 }
 
 .tempCardElements{
