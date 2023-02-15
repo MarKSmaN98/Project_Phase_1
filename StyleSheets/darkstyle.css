@@ -383,5 +383,8 @@ label[for=preLoc]{
 /* Clicked Status */
 
 .clicked {
-    opacity: .5;
+    background-color: #BCF4DE;
+    color: #473D52;
+    cursor: pointer;
+    transform: scale(1.1);
 }

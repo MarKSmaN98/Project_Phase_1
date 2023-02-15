@@ -123,15 +123,12 @@ const renderCards = (weatherArray) => {
         cardContainer.append(newCard);
 
         newCard.addEventListener('click', e => {
-            // const cardContainerHTML = document.getElementsByClassName('card');
-            // Array.from(cardContainerHTML).forEach((div)=>{
-            //     console.log("this is one div",div); 
-            // })
+            const cardContainerHTML = document.getElementsByClassName('card');
+            Array.from(cardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
             renderDetails(time);
-            // newCard.classList.add ('clicked')
-
-            // need to iterate through each of the elements in this and remove the clicked
-            // classbeforereapplying it on 131.
+            newCard.classList.add ('clicked')
         });        
     });
 
@@ -160,7 +157,12 @@ const renderCards = (weatherArray) => {
         mainCardContainer.append(newMainCard);
 
         newMainCard.addEventListener('click', e => {
-           renderDetails(time)
+            const mainCardContainerHTML = document.getElementsByClassName('mainCard');
+            Array.from(mainCardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
+            renderDetails(time);
+            newMainCard.classList.add ('clicked')
         });  
     })
     
