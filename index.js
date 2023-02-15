@@ -80,6 +80,7 @@ const renderCards = (weatherArray) => {
 
     weatherArray.forEach(time => {    
         // console.log(time)
+        
         const newCard = document.createElement('div');
         newCard.className = "card"
         newCard.innerHTML = ` 
