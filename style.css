@@ -95,11 +95,14 @@ body {
 .imgCardElements{
     position: absolute;
     top:30%;
+    left : 0%;
+    width: 100%;
 }
 
 .imgCardElements img {
     max-width: 100%;
     height:auto;
+    transform: scale(1.3);
 }
 
 .titleCardElements{
@@ -111,7 +114,9 @@ body {
 
 .forecastCardElements{
     position: absolute;
-    top:55%;
+    top: 60%;
+    left : 0%;
+    width: 100%;
 }
 
 .tempCardElements{
