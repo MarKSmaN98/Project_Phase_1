@@ -38,9 +38,13 @@ body {
 /* Weekly Snapshot */
 
 .cardContainerHeader {
-    position: fixed;
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+    margin-right: 75%;
     top: 10%;
-    left: 10%;
+    left: 50%;
+    width: 10vw;
 }
 
 #cardContainerHeader{
@@ -48,7 +52,7 @@ body {
     font-size: 32px;
     position: absolute;
     z-index:12;
-    right: 50%;
+    right: 0vw;
     font-size: 2vw;
 }
 
@@ -102,7 +106,7 @@ body {
 
 .imgCardElements{
     position: absolute;
-    top:30%;
+    top:25%;
     left : 0%;
     width: 100%;
 }
@@ -125,7 +129,7 @@ body {
 }
 
 #shortForecast {
-    font-size: .8vw;
+    font-size: .7vw;
 }
 
 .forecastCardElements{
@@ -218,11 +222,20 @@ label {
     justify-content: space-evenly;
 }
 
+.mainCardTitle {
+    font-size: 4vw;
+}
+
 .mainCard:hover {
     background-color: #BCF4DE;
     color: #473D52;
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.mainWeatherPic {
+    max-width: 100%;
+    height: auto;
 }
 
 
