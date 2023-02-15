@@ -215,6 +215,11 @@ label {
     height: 300px;
 }
 
+.forecastMainCardElements #temp {
+    position: absolute;
+    top: 80%;
+}
+
 
 
 /* Header Button */
