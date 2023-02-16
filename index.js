@@ -123,15 +123,16 @@ const renderCards = (weatherArray) => {
         cardContainer.append(newCard);
 
         newCard.addEventListener('click', e => {
-            // const cardContainerHTML = document.getElementsByClassName('card');
-            // Array.from(cardContainerHTML).forEach((div)=>{
-            //     console.log("this is one div",div); 
-            // })
+            const cardContainerHTML = document.getElementsByClassName('card');
+            Array.from(cardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
+            const mainCardContainerHTML = document.getElementsByClassName('mainCard');
+            Array.from(mainCardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
             renderDetails(time);
-            // newCard.classList.add ('clicked')
-
-            // need to iterate through each of the elements in this and remove the clicked
-            // classbeforereapplying it on 131.
+            newCard.classList.add ('clicked')
         });        
     });
 
@@ -160,7 +161,16 @@ const renderCards = (weatherArray) => {
         mainCardContainer.append(newMainCard);
 
         newMainCard.addEventListener('click', e => {
-           renderDetails(time)
+            const cardContainerHTML = document.getElementsByClassName('card');
+            Array.from(cardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
+            const mainCardContainerHTML = document.getElementsByClassName('mainCard');
+            Array.from(mainCardContainerHTML).forEach((div)=>{
+                div.classList.remove('clicked')
+            })
+            renderDetails(time);
+            newMainCard.classList.add ('clicked')
         });  
     })
     
@@ -173,12 +183,13 @@ const renderDetails = (weatherDataObject) => {
         if (weatherDataObject.probabilityOfPrecipitation.value == null) {
             weatherDataObject.probabilityOfPrecipitation.value = 0
         }
+        dewpointValue = weatherDataObject.dewpoint.value.toFixed(2)
         weatherDetailsContainer.innerHTML = `
         <h4>Weather Details</h4>
         <p id="detailedforecast" class="detailSection">${weatherDataObject.detailedForecast}</p>
         <p id="probabilityOfPrecipitation" class="detailSection">${weatherDataObject.probabilityOfPrecipitation.value}% of rain</p>
         <p id="relativeHumidity" class="detailSection">Relative Humidity: ${weatherDataObject.relativeHumidity.value}%</p>
-        <p id="dewpoint" class="detailSection">Dewpoint: ${weatherDataObject.dewpoint.value}</p>
+        <p id="dewpoint" class="detailSection">Dewpoint:${dewpointValue}</p>
         <p id="wind">Wind: ${weatherDataObject.windSpeed} ${weatherDataObject.windDirection}</p>
         `
     }
