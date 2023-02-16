@@ -18,6 +18,11 @@ body {
     overflow-x: hidden;
 }
 
+.done {
+    background-color: gray;
+    pointer-events: none;
+}
+
 #inputDiv {
     border: 2px;
     width: 100%;

@@ -45,10 +45,15 @@ getPoints(locSelect.value);
 
 
 //start functions
+let gotLoc = false;
 function getUserLocation() {
+    if(gotLoc == true) {
+        return 0;
+    }
     const successCallback = (position) => {
         let concatinatePos = (position.coords.latitude).toFixed(4).toString() + ',' + (position.coords.longitude).toFixed(4).toString();
         //console.log(concatinatePos)
+        addLocation(concatinatePos);
         getPoints(concatinatePos);
       };
       
@@ -56,6 +61,18 @@ function getUserLocation() {
         console.log(error);
       };
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+}
+
+function addLocation(pos) {
+    let btn = document.getElementById('locBtn');
+    btn.classList.add('done');
+    gotLoc = true;
+    let target = document.getElementById('locationSelector');
+    let opt = document.createElement('option');
+    opt.value = pos;
+    opt.innerText = 'Client Location';
+    target.append(opt);
+    target.value = pos;
 }
 
 function getPoints(location) {
