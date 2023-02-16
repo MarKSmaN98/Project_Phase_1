@@ -27,13 +27,23 @@ locSelect.addEventListener('change', e => {
 })
 let locBtn = document.getElementById('locBtn');
 locBtn.addEventListener('click', e => {
-    getUserLocation();
+    let state = getUserLocation();
+    if (state != false) {
+        let btn = document.getElementById('locBtn');
+        btn.classList.add('done');
+        gotLoc = true;
+    }
 })
 let formSub = document.getElementById('geoInput');
+let locationIter = 1;
 formSub.addEventListener('submit', e => {
     e.preventDefault();
     let userInput = correctInput(e.target.input.value);
     e.target.reset();
+    let state = addLocation(userInput, `Custom Location ${locationIter}`);
+    if (state != false) {
+        locationIter +=1;
+    }
     getPoints(userInput);
 })
 
@@ -52,32 +62,49 @@ function getUserLocation() {
     }
     const successCallback = (position) => {
         let concatinatePos = (position.coords.latitude).toFixed(4).toString() + ',' + (position.coords.longitude).toFixed(4).toString();
-        //console.log(concatinatePos)
-        addLocation(concatinatePos);
-        getPoints(concatinatePos);
+        let state = addLocation(concatinatePos, 'Client Location');
+        if (state != false) {
+            getPoints(concatinatePos);
+            return true;
+        }
+        else {
+            return false;
+        }
       };
       
     const errorCallback = (error) => {
         console.log(error);
+        return false;
       };
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }
 
-function addLocation(pos) {
-    let btn = document.getElementById('locBtn');
-    btn.classList.add('done');
-    gotLoc = true;
+function addLocation(pos, name) {
     let target = document.getElementById('locationSelector');
+    if (checkValues(pos)) {
+        target.value = pos;
+        return false;
+    }
     let opt = document.createElement('option');
     opt.value = pos;
-    opt.innerText = 'Client Location';
+    opt.innerText = name;
     target.append(opt);
     target.value = pos;
 }
 
+function checkValues(value) {
+    let target = document.getElementById('locationSelector');
+    let tArray = target.options;
+    for (opt in tArray) {
+        if (tArray[opt].value == value) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function getPoints(location) {
     let corLoc = correctInput(location);
-    //console.log(corLoc);
     let url = `https://api.weather.gov/points/${corLoc}`;
     fetch(url)
         .then(res => res.json())
@@ -85,11 +112,8 @@ function getPoints(location) {
             fetch(dataObj.properties.forecast)
                 .then(res => res.json())
                 .then(data => { 
-                    //console.log(data);
                     renderCards(data.properties.periods);
                 });
-                    //getWeather(dataObj.properties.forecast)
-                    //console.log(dataObj);
             });
 
 }
@@ -118,8 +142,6 @@ const renderCards = (weatherArray) => {
     renderDetails(weatherArray[0]);
 
     weatherArray.forEach(time => {    
-        // console.log(time)
-        
         const newCard = document.createElement('div');
         newCard.className = "card"
         newCard.innerHTML = ` 
@@ -155,7 +177,6 @@ const renderCards = (weatherArray) => {
 
     let iter = 1;
     weatherArray.slice(0,2).forEach(time => { //get the first two elements from the array and display them in main cards
-        // console.log(time)
         const newMainCard = document.createElement('div');
         newMainCard.className = 'mainCard';
         newMainCard.id = `mainCard${iter}`;
